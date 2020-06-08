@@ -2,6 +2,7 @@
 <br>Please cite this code as:
 <br>Spreadborough, Kristal (2020) Music and Parkinson's Disease (Version 1.0) [Source code]. https://github.com/KristalSpreadborough/MusicAndParkinsons
 <br>
+<br>
 This code was used to clean metadata used for a systematic review of research into Music and Parkinson's disease.
 First, relevant fields from an XML file downloaded from PubMed were extracted using the following xslt style sheets: 
 <br>stylesheetJournal.xslt
