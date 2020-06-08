@@ -1,0 +1,13 @@
+# NOTE: This process uses xsltproc, which is only available on OS. 
+# Navigate to the directory where the xslt files are stored: 
+cd /Users/...
+
+# Extract relevant fields from master xml file using the xslt stylesheet. Write these extracted fields to csv.
+xsltproc stylesheetTitleLanguage.xslt pubmed_result82.xml > pubmedTitleLanguage.csv
+xsltproc stylesheetJournal.xslt pubmed_result82.xml > pubmedJournal.csv
+xsltproc stylesheetJournalIssue.xslt pubmed_result82.xml > pubmedJournalIssue.csv
+xsltproc stylesheetJournalDate.xslt pubmed_result82.xml > pubmedJournalDate.csv
+
+#Merge individual csv files into one
+:|paste -d', ' pubmedTitleLanguage.csv - pubmedJournal.csv - pubmedJournalIssue.csv - pubmedJournalDate.csv > pubmedOut.csv
+
